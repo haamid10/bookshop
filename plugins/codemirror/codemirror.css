@@ -1,8 +1,7 @@
 /* BASICS */
-
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
+  font-family: sans-serif;
   height: 300px;
   color: black;
   direction: ltr;
@@ -18,6 +17,8 @@
   padding: 0 4px; /* Horizontal padding of content */
 }
 
+
+
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
   background-color: transparent; /* The little square between H and V scrollbars */
 }
@@ -26,7 +27,7 @@
 
 .CodeMirror-gutters {
   border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  background-color: #ff7;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
@@ -34,12 +35,12 @@
   padding: 0 3px 0 5px;
   min-width: 20px;
   text-align: right;
-  color: #999;
+  color: #9e99;
   white-space: nowrap;
 }
 
 .CodeMirror-guttermarker { color: black; }
-.CodeMirror-guttermarker-subtle { color: #999; }
+.CodeMirror-guttermarker-subtle { color: #9e99; }
 
 /* CURSOR */
 
@@ -347,4 +348,4 @@ div.CodeMirror-dragcursors {
 .cm-tab-wrap-hack:after { content: ''; }
 
 /* Help users use markselection to safely style text background */
-span.CodeMirror-selectedtext { background: none; }
+span.CodeMirror-selectedtext { background: none; } 

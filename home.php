@@ -1,19 +1,36 @@
- <!-- Header-->
- <header class="bg-dark py-5" id="main-header">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">If you want to make intelligent, get books from here.</h1>
-            <p class="lead fw-normal text-white-50 mb-0">Shop Now!</p>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Header-->
+<div>
+
+
+  <header class=" bg-[url('./admin/images/h3.jpg')] bg-cover py-6 flex flex-row " >
+     <h1></h1>
+     <div class="mb-72">
+     <!-- <img class="absolute h-screen w-auto ml-72 backdrop-blur-lg " src="./admin/images/h2.jpg" alt=""> -->
+     </div>
+    <div class="  relative rounded-lg px-12 inline-block  mt-4 ml-76 w-96  h-auto  backdrop-blur-xl" >
+        <div class="text-left   ">
+            <h1 class="font-sans font-bold text-4xl p-2 text-white capitalize">
+                Motivating Ways to improve your skills</h1>
+            <p class="ont-sans font-light text-md p-2 text-white  ">If you want to make intelligent, get books pretium, magna felis placerat libero, quis tincidunt felis diam nec nisi. Sed scelerisque ullamcorper cursus. Suspendisse posuere, velit nec rhoncus cursus, urna sapien consectetur est, et lacinia odio leo nec massa. Nam vitae nunc vitae tortor vestibulum consequat ac quis risus. Sed finibus pharetra orci, id vehicula tellus eleifend sit amet.
+
+from here.</p>
+            <button class=" bg-white text-orange-500 p-2 rounded-sm" ><a class="" href="#about"> Read More </a> </button>
         </div>
     </div>
 </header>
 <!-- Section-->
-<style>
+ <style class="mt-32">
     .book-cover{
         object-fit:contain !important;
         height:auto !important;
     }
 </style>
+
+
+
+
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-md-3 row-cols-xl-4 justify-content-center">
