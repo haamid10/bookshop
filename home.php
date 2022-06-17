@@ -75,11 +75,20 @@ from here.</p>
                         $inv[] = number_format($ir['price']);
                     }
             ?>
-            <div class=" col mb-5 flex flex-col  gap-12 w-36">
-                <div class="bg-white  w-72 p-2 rounded-md ">
+            <div class="  flex flex-col justify-between gap-12">
+                <h1>Arrivals</h1>
+                <div class="bg-white  w-72 p-2 rounded-md p-12 ml-6">
                     <!-- Product image-->
                     <div class="relative">
                     <img class="w-fit h-80 p-12 " src="<?php echo validate_image($img) ?>" alt="..." />
+                   
+                    <div class="absolute bottom-72 p-2 ">
+                            <!-- Product price-->
+                            <?php foreach($inv as $k=> $v): ?>
+                                <span class=" bg-orange-500 p-2 rounded-lg text-white p-1 "><b>$</b><?php echo $v ?></span>
+                            <?php endforeach; ?>
+                        </div>
+
                     </div>
                     <!-- Product details-->
                     <div class=" font-sans text-center">
@@ -87,18 +96,13 @@ from here.</p>
                             <!-- Product name-->
                             <h5 class="font-bold py-2"><?php echo $row['title'] ?></h5>
                         </div>
-                        <div class="absolute top-2 p-2 ">
-                            <!-- Product price-->
-                            <?php foreach($inv as $k=> $v): ?>
-                                <span class=" bg-orange-500 p-2 rounded-lg text-white p-1 "><b>$</b><?php echo $v ?></span>
-                            <?php endforeach; ?>
-                        </div>
+                       
                         <p class="font-sans text-md"><small class="font-sans  font-bold">© <?php echo $row['author'] ?></small></p>
                     </div>
                     <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent mt-12">
+                    <div class="mt-12 p-2">
                         <div class="text-center">
-                            <a class="bg-orange-500  text-white  px-6 py-2 rounded-lg "   href=".?p=view_product&id=<?php echo md5($row['id']) ?>">View</a>
+                            <a class="bg-orange-500  text-white  px-6 py-2 rounded-lg "  href=".?p=view_product&id=<?php echo md5($row['id']) ?>">View</a>
                         </div>
                         
                     </div>
