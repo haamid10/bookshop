@@ -1,18 +1,21 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
     #uni_modal .modal-content>.modal-footer,#uni_modal .modal-content>.modal-header{
         display:none;
     }
-</style>
-<div class="container-fluid">
     
-    <div class="row">
-    <h3 class="float-right">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+</style>
+<div class="bg-gray-900 text-white items-center p-12 rounded-xl">
+    
+    <div class="flex flex-row ">
+    <h3 class="">
+        <button type="button" class="" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
     </h3>
         <div class="col-lg-12">
-            <h3 class="text-center">Login</h3>
+            <h3 class="text-center font-sans">Login</h3>
             <hr>
             <form action="" id="login-form">
                 <div class="form-group">

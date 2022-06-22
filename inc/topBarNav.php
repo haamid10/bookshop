@@ -1,12 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid px-4 px-lg-5 ">
-                <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <a class="navbar-brand" href="./">
-                <img src="<?php echo validate_image($_settings->info('logo')) ?>" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- navbar navbar-expand-lg navbar-light bg-light -->
+
+<nav class=" navbar-expand-lg flex flex-col bg-gray-100 drop-shadow-xl h-20 items-center justify-start">
+            <div class="flex flex-row items-center gap-12 py-6">
+                <!-- <button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+
+                <div class="m-0">
+              
+
+                <a class=" font-sans text-lg font-bold text-center" href="./">
+                <img class="h-12 w-auto mt-0 mb-12" src="<?php echo validate_image($_settings->info('logo')) ?>"  alt="" loading="lazy">
                 <?php echo $_settings->info('short_name') ?>
                 </a>
+                </div>
 
-                <form class="form-inline" id="search-form">
+                <form class="" id="search-form">
                   <div class="input-group">
                     <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
                     <div class="input-group-append">
@@ -40,7 +49,7 @@
                         <?php if($count_cats > 3): ?>
                         <li class="nav-item"><a class="nav-link" href="./?p=view_categories">All Categories</a></li>
                         <?php endif; ?>
-                        <li class="nav-item"><a class="nav-link" href="./?p=about">About</a></li>
+                        <li id="about" class="nav-item"><a class="nav-link" href="./?p=about">About</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                       <?php if(!isset($_SESSION['userdata']['id'])): ?>

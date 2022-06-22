@@ -1,3 +1,6 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+
 <script>
   $(document).ready(function(){
     $('#p_use').click(function(){
@@ -59,11 +62,11 @@
   })
 </script>
 <!-- Footer-->
-<footer class="h-32 bg-gray-600">
+<footer class="h-32 bg-gray-900">
 
-            <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2021</p>
-              <p class="m-0 text-center text-white">Developed By: <a href="https://www.facebook.com/maktabaddaiqra/">Iqra</a></p>
+            <div class=" flex flex-col justify-center font-sans text-center">
+              <p class="text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2022</p>
+              <p class="text-white">Developed By: <a href="https://www.facebook.com/maktabaddaiqra/">Iqra</a></p>
           </div>
         </footer>
 
