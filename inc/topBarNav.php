@@ -1,31 +1,36 @@
-
+<!-- flex flex-row items-center gap-12 py-6 -->
+<!-- flex flex-col bg-gray-100 drop-shadow-xl h-20 items-center justify-start -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- navbar navbar-expand-lg navbar-light bg-light -->
 
-<nav class=" navbar-expand-lg flex flex-col bg-gray-100 drop-shadow-xl h-20 items-center justify-start">
-            <div class="flex flex-row items-center gap-12 py-6">
+
+
+<nav class=" navbar navbar-expand-lg navbar-light  ">
+
+         
+<div class=" flex flex-row items-center justify-between gap-12 py-6 h-32 bg-blue-200   shadow-lg shadow-gray-900 m-3 rounded-xl">
                 <!-- <button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
 
-                <div class="m-0">
+                <div class="ml-0 mb-2 mt-4 p-3 ">
               
 
-                <a class=" font-sans text-lg font-bold text-center" href="./">
-                <img class="h-12 w-auto mt-0 mb-12" src="<?php echo validate_image($_settings->info('logo')) ?>"  alt="" loading="lazy">
-                <?php echo $_settings->info('short_name') ?>
+                <a class="  " href="./">
+                <img class="h-28 w-auto p-2 m-4" src="<?php echo validate_image($_settings->info('logo')) ?>"  alt="" loading="lazy">
+               
                 </a>
                 </div>
 
-                <form class="" id="search-form">
-                  <div class="input-group">
-                    <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-success btn-sm m-0" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
+                <form class="  rounded-lg" id="search-form">
+                  <div class="flex ">
+                    <input class="form-control form-control-sm form border-2 border-gray-900" type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
+                    <div class="">
+                      <button class="w-8 h-8 outline-none border-2 border-gray-900 rounded-r-lg bg-gray" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
                     </div>
                   </div>
                 </form>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./">Home</a></li>
+                <div class="flex flex-row items-center justify-between m-72" id="navbarSupportedContent">
+                    <ul class="flex flex-row   ">
+                        <li class="font-sans capitalize font-bold text-black"><a class="nav-link" aria-current="page" href="./">Home</a></li>
                         <?php 
                         $cat_qry = $conn->query("SELECT * FROM categories where status = 1  limit 3");
                         $count_cats =$conn->query("SELECT * FROM categories where status = 1 ")->num_rows;
@@ -76,7 +81,9 @@
                     </div>
                 </div>
             </div>
+            </div>
         </nav>
+
 <script>
   $(function(){
     $('#login-btn').click(function(){
