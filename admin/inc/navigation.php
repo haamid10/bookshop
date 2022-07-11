@@ -1,9 +1,14 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 </style>
+
 <!-- Main Sidebar Container -->
-      <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-no-expand">
+<div class="p-8">
+      <aside class="bg-gray-900  main-sidebar  ">
         <!-- Brand Logo -->
         <a href="<?php echo base_url ?>admin" class="brand-link bg-primary text-sm">
-        <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="brand-image img-circle elevation-3" style="opacity: .8;width: 2.5rem;height: 2.5rem;max-height: unset">
+        <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="rounded-full inline-block  w-24 h-auto 
+        " >
         <span class="brand-text font-weight-light"><?php echo $_settings->info('short_name') ?></span>
         </a>
         <!-- Sidebar -->
@@ -22,11 +27,11 @@
                 <div class="clearfix"></div>
                 <!-- Sidebar Menu -->
                 <nav class="mt-4">
-                   <ul class="nav nav-pills nav-sidebar flex-column text-sm nav-compact nav-flat nav-child-indent nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="false">
+                   <ul class="" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item dropdown">
                       <a href="./" class="nav-link nav-home">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
+                        <p class="mt-12">
                           Dashboard
                         </p>
                       </a>
@@ -131,3 +136,4 @@
      
     })
   </script>
+</div>

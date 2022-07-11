@@ -30,6 +30,7 @@ from here.</p>
         height:auto !important;
     }
 </style>
+
 <section class=" bg-gray-300">
 
 .
@@ -44,6 +45,22 @@ from here.</p>
       <img class="w-auto h-screen rounded-lg" src="./admin/images/n2.jpg " alt="transform image">
     </div>
    
+
+<section class=" bg-gray-200 ">
+
+
+<h1>.</h1>
+
+<div  id="standout" class=" grid grid-cols-2 mt-12">
+ 
+
+    <div  class="order-first relative">
+      <img class="" src="./admin/images/n2.jpg " alt="transform image">
+    </div>
+    <div class="bg-orange-600 w-auto absolute h-screen mr-96 ">
+        .\
+        lsdahjhd
+    </div>
     <div class="text-left py-32 px-8  text-center  ">
       <h1 class="text-left text-6xl capitalize text-orange-600 font-sans font-bold mb-8">Leadership tips to improve skills</h1>
       <p class="text-left text-lg font-sans text-black  tracking-wide mb-10 ">my name is aadil i'm living here last five years ,i have been learning acounting in last five years hustling the nights planing the days you can't imagine what i'm doing alone </p>
@@ -52,9 +69,15 @@ from here.</p>
  </div>
 
 </section>
+
 <section class="py-5 bg-gray-200">
     <div class="flex flex-col justify-center m-12">
         <div class=" w-76 p-12  h-auto flex flex-row ">
+=======
+<section class="py-5 bg-gray-900">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-md-3 row-cols-xl-4 justify-content-center">
+r
             <?php 
                 $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand() limit 8 ");
                 while($row = $products->fetch_assoc()):

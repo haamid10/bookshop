@@ -1,6 +1,8 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
-    <div class="container">
+  <nav class="bg-gray-900">
+    <div class="bg-gray-900">
       <a href="<?php echo base_url ?>index3.html" class="navbar-brand">
         <img src="<?php echo base_url ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
@@ -10,7 +12,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+      <div class="bg-gray-900" >
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -98,9 +100,10 @@
                 <img src="<?php echo base_url ?>dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                 <div class="media-body">
                   <h3 class="dropdown-item-title">
-                    John Pierce
+                   
                     <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                   </h3>
+                  Hamed apdi
                   <p class="text-sm">I got your message bro</p>
                   <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                 </div>
