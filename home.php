@@ -30,6 +30,22 @@ from here.</p>
         height:auto !important;
     }
 </style>
+
+<section class=" bg-gray-300">
+
+.
+
+
+<div  id="standout" class=" grid grid-cols-2 mt-12">
+<div class="ml-96 mt-12 bg-orange-600 w-auto relative h-screen">
+        <h1>.</h1>
+       
+    </div>
+    <div  class="order-first absolute">
+      <img class="w-auto h-screen rounded-lg" src="./admin/images/n2.jpg " alt="transform image">
+    </div>
+   
+
 <section class=" bg-gray-200 ">
 
 
@@ -53,9 +69,15 @@ from here.</p>
  </div>
 
 </section>
+
+<section class="py-5 bg-gray-200">
+    <div class="flex flex-col justify-center m-12">
+        <div class=" w-76 p-12  h-auto flex flex-row ">
+=======
 <section class="py-5 bg-gray-900">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-md-3 row-cols-xl-4 justify-content-center">
+r
             <?php 
                 $products = $conn->query("SELECT * FROM `products` where status = 1 order by rand() limit 8 ");
                 while($row = $products->fetch_assoc()):
@@ -76,26 +98,34 @@ from here.</p>
                         $inv[] = number_format($ir['price']);
                     }
             ?>
-            <div class="col mb-5">
-                <div class="card product-item">
+            <div class="  flex flex-col justify-between gap-12">
+                <h1>Arrivals</h1>
+                <div class="bg-white  w-72 p-2 rounded-md p-12 ml-6">
                     <!-- Product image-->
-                    <img class="card-img-top w-100 book-cover" src="<?php echo validate_image($img) ?>" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder"><?php echo $row['title'] ?></h5>
+                    <div class="relative">
+                    <img class="w-fit h-80 p-12 " src="<?php echo validate_image($img) ?>" alt="..." />
+                   
+                    <div class="absolute bottom-72 p-2 ">
                             <!-- Product price-->
                             <?php foreach($inv as $k=> $v): ?>
-                                <span><b>Price: </b><?php echo $v ?></span>
+                                <span class=" bg-orange-500 p-2 rounded-lg text-white p-1 "><b>$</b><?php echo $v ?></span>
                             <?php endforeach; ?>
                         </div>
-                        <p class="m-0"><small>By: <?php echo $row['author'] ?></small></p>
+
+                    </div>
+                    <!-- Product details-->
+                    <div class=" font-sans text-center">
+                        <div class="">
+                            <!-- Product name-->
+                            <h5 class="font-bold py-2"><?php echo $row['title'] ?></h5>
+                        </div>
+                       
+                        <p class="font-sans text-md"><small class="font-sans  font-bold">© <?php echo $row['author'] ?></small></p>
                     </div>
                     <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="mt-12 p-2">
                         <div class="text-center">
-                            <a class="btn btn-flat btn-primary "   href=".?p=view_product&id=<?php echo md5($row['id']) ?>">View</a>
+                            <a class="bg-orange-500  text-white  px-6 py-2 rounded-lg "  href=".?p=view_product&id=<?php echo md5($row['id']) ?>">View</a>
                         </div>
                         
                     </div>

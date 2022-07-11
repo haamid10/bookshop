@@ -1,4 +1,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
+
+
+
 <script>
   $(document).ready(function(){
      window.viewer_modal = function($src = ''){
@@ -60,7 +63,11 @@
         <strength class=" font-bold font-sans gap-1">coppy right <a href="https://github.com/haamid10">abdihamiid</a> </strength>
         All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
+
+          <b><?php echo $_settings->info('short_name') ?> (© <a href="https://www.facebook.com/maktabaddaiqra/" target="blank">Iqra</a> )</b> v1.0
+
           <b><?php echo $_settings->info('short_name') ?> (by: <a href="mailto:apdixamiid999@gmail.com" target="blank">abdihamiid</a> )</b> v1.0
+
         </div>
       </footer>
     </div>

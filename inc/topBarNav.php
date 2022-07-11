@@ -1,22 +1,41 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid px-4 px-lg-5 ">
-                <button class="navbar-toggler btn btn-sm" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <a class="navbar-brand" href="./">
-                <img src="<?php echo validate_image($_settings->info('logo')) ?>" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-                <?php echo $_settings->info('short_name') ?>
-                </a>
+<!-- flex flex-row items-center gap-12 py-6 -->
+<!-- flex flex-col bg-gray-100 drop-shadow-xl h-20 items-center justify-start -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- navbar navbar-expand-lg navbar-light bg-light -->
 
-                <form class="form-inline" id="search-form">
-                  <div class="input-group">
-                    <input class="form-control form-control-sm form " type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-outline-success btn-sm m-0" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
-                    </div>
-                  </div>
-                </form>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./">Home</a></li>
+
+
+ <nav class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4 h-32 bg-blue-50">
+
+         
+
+          
+
+               
+              
+                <!-- logo -->
+                <div class="flex items-center justify-between mb-4 md:mb-0 mr-12"> 
+                <a class="no-underline text-grey-darkest hover:text-black" href="./">
+                <img class="w-12 h-auto" src="<?php echo validate_image($_settings->info('logo')) ?>"  alt="" loading="lazy">
+                  <?php echo $_settings->info('short_name') ?>
+                 </a>
+                 </div>
+
+                 <!-- search button -->
+
+                 <form class="mb-4 w-full md:mb-0 md:w-1/4" id="search-form">
+   
+    
+                  <input class="bg-grey-lightest border-2 focus:border-orange p-2 rounded-lg shadow-inner w-full" type="search" placeholder="Search" aria-label="Search" name="search"  value="<?php echo isset($_GET['search']) ? $_GET['search'] : "" ?>"  aria-describedby="button-addon2">
+  
+                     <button class="hidden">Submit</button>
+                    </form>
+                <div class="flex  items-center justify-between" id="navbarSupportedContent">
+                    <ul class="list-reset md:flex items-center justify-between">
+                    <li class="md:mr-4">
+                     <a class="block font-bold no-underline  py-2 text-grey-darkest   md:border-none md:p-0 hover:text-blue-500" aria-current="page" href="./">
+                         Home
+                      </li>
                         <?php 
                         $cat_qry = $conn->query("SELECT * FROM categories where status = 1  limit 3");
                         $count_cats =$conn->query("SELECT * FROM categories where status = 1 ")->num_rows;
@@ -24,11 +43,14 @@
                           $sub_qry = $conn->query("SELECT * FROM sub_categories where status = 1 and parent_id = '{$crow['id']}'");
                           if($sub_qry->num_rows <= 0):
                         ?>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="./?p=products&c=<?php echo md5($crow['id']) ?>"><?php echo $crow['category'] ?></a></li>
+                        <li class="md:ml-4">
+                     <a class="block no-underline hover:underline py-2 text-grey-darkest gap-12 hover:text-black md:border-none md:p-0" aria-current="page" 
+                      href="./?p=products&c=<?php echo md5($crow['id']) ?>"><?php echo $crow['category'] ?></a></li>
                         
                         <?php else: ?>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" id="navbarDropdown<?php echo $crow['id'] ?>" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><?php echo $crow['category'] ?></a></a>
+                      <li class="md:ml-4">
+                     <a class="block no-underline hover:underline py-2 text-grey-darkest  font-bold ap-12 hover:text-black md:border-none md:p-0 "
+                         id="navbarDropdown<?php echo $crow['id'] ?>" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><?php echo $crow['category'] ?></a></a>
                             <ul class="dropdown-menu  p-0" aria-labelledby="navbarDropdown<?php echo $crow['id'] ?>">
                               <?php while($srow = $sub_qry->fetch_assoc()): ?>
                                 <li><a class="dropdown-item border-bottom" href="./?p=products&c=<?php echo md5($crow['id']) ?>&s=<?php echo md5($srow['id']) ?>"><?php echo $srow['sub_category'] ?></a></li>
@@ -38,9 +60,9 @@
                         <?php endif; ?>
                         <?php endwhile; ?>
                         <?php if($count_cats > 3): ?>
-                        <li class="nav-item"><a class="nav-link" href="./?p=view_categories">All Categories</a></li>
+                        <li class="font-sans capitalize font-bold text-black  m-2 gap-12 p-2"><a class="" href="./?p=view_categories">Categories</a></li>
                         <?php endif; ?>
-                        <li class="nav-item"><a class="nav-link" href="./?p=about">About</a></li>
+                        <li id="about" class="font-sans capitalize font-bold text-black p-2 m-2 gap-12 "><a class="" href="./?p=about">About</a></li>
                     </ul>
                     <div class="d-flex align-items-center">
                       <?php if(!isset($_SESSION['userdata']['id'])): ?>
@@ -67,7 +89,9 @@
                     </div>
                 </div>
             </div>
-        </nav>
+            </div>
+        </nav> 
+
 <script>
   $(function(){
     $('#login-btn').click(function(){
