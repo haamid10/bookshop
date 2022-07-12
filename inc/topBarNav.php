@@ -43,16 +43,24 @@
                           $sub_qry = $conn->query("SELECT * FROM sub_categories where status = 1 and parent_id = '{$crow['id']}'");
                           if($sub_qry->num_rows <= 0):
                         ?>
-                        <li class="flex items-center md:ml-4">
+                        <li class="md:ml-4">
                      <a class="block no-underline hover:underline py-2 text-grey-darkest gap-12 hover:text-black md:border-none md:p-0" aria-current="page" 
                       href="./?p=products&c=<?php echo md5($crow['id']) ?>"><?php echo $crow['category'] ?></a></li>
                         
                         <?php else: ?>
-                     
+                      <li class="md:ml-4">
+                     <a class="block no-underline hover:underline py-2 text-grey-darkest  font-bold ap-12 hover:text-black md:border-none md:p-0 "
+                         id="navbarDropdown<?php echo $crow['id'] ?>" href="#" role="button" data-toggle="dropdown" aria-expanded="false"><?php echo $crow['category'] ?></a></a>
+                            <ul class="dropdown-menu  p-0" aria-labelledby="navbarDropdown<?php echo $crow['id'] ?>">
+                              <?php while($srow = $sub_qry->fetch_assoc()): ?>
+                                <li><a class="dropdown-item border-bottom" href="./?p=products&c=<?php echo md5($crow['id']) ?>&s=<?php echo md5($srow['id']) ?>"><?php echo $srow['sub_category'] ?></a></li>
+                            <?php endwhile; ?>
+                            </ul>
+                        </li>
                         <?php endif; ?>
                         <?php endwhile; ?>
                         <?php if($count_cats > 3): ?>
-                        <li class="flex items-center md:ml-4"><a class="block no-underline font-bold hover:underline py-2 text-grey-darkest gap-12 hover:text-blue md:border-none md:p-0" href="./?p=view_categories">Categories</a></li>
+                        <li class="font-sans capitalize font-bold text-black  m-2 gap-12 p-2"><a class="" href="./?p=view_categories">Categories</a></li>
                         <?php endif; ?>
                         <li id="about" class="font-sans capitalize font-bold text-black p-2 m-2 gap-12 "><a class="" href="./?p=about">About</a></li>
                     </ul>
