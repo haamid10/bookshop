@@ -5,7 +5,7 @@
 
 
 
- <nav class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4 h-32 bg-blue-50">
+ <nav class="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4 h-24 bg-blue-50">
 
          
 

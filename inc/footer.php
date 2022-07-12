@@ -62,10 +62,20 @@
   })
 </script>
 <!-- Footer-->
-<footer class="h-32 bg-gray-900">
+<!-- <footer class="h-32 bg-gray-900 pb-12 ">
 
-            <div class=" flex flex-col justify-center font-sans text-center">
-              <p class="text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2022</p>
+            <div class=" flex flex-col justify-center font-sans text-center "> -->
+            <footer  class=" bg-gray-800 py-10 px-10 text-center text-teal-300">
+    <h1 class=" text-4xl text-teal-300  font-sans font-bold mb-10">Iqra Books</h1>
+    <ul class=" flex text-teal-300 justify-around font-semibold">
+         <li id="about"><a class="" href="./?p=about">About</a> </li>
+        
+        </ul>
+        <div class="mt-16 flex flex-row items-center justify-around max-w-12 max-h-12">
+     
+        </div>
+    
+             
               <p class="text-white">Developed By: <a href="https://www.facebook.com/maktabaddaiqra/">Iqra</a></p>
           </div>
         </footer>
