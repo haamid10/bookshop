@@ -26,7 +26,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="clearfix"></div>
                 <!-- Sidebar Menu -->
-                <nav class="mt-4">
+                <nav class=" mt-4">
                    <ul class="" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item dropdown">
                       <a href="./" class="nav-link nav-home">

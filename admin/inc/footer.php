@@ -59,72 +59,72 @@
     }
   })
 </script>
-<footer class="inline flex flex-row items-center justify-between ml-64 p-1 px-3 rounded bg-gray-900 ">
-        <strength class=" font-bold font-sans gap-1">coppy right <a href="https://github.com/haamid10">abdihamiid</a> </strength>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
 
-          <b><?php echo $_settings->info('short_name') ?> (© <a href="https://www.facebook.com/maktabaddaiqra/" target="blank">Iqra</a> )</b> v1.0
-
-          <b><?php echo $_settings->info('short_name') ?> (by: <a href="mailto:apdixamiid999@gmail.com" target="blank">abdihamiid</a> )</b> v1.0
-
-        </div>
-      </footer>
+<footer id="footer" class="footer">
+    <div class="copyright">
+    <b><?php echo $_settings->info('short_name') ?> (© <a href="https://www.facebook.com/maktabaddaiqra/" target="blank">Iqra</a> )</b>
+      &copy; Copyright <strong><span>Iqra books</span></strong>. All Rights Reserved
     </div>
+    <div class="credits">
+    <div class="float-right d-none d-sm-inline-block">
+
+<b><?php echo $_settings->info('short_name') ?> (© <a href="https://www.facebook.com/maktabaddaiqra/" target="blank">Iqra</a> )</b> v1.0
+
+<b><?php echo $_settings->info('short_name') ?> (by: <a href="mailto:apdixamiid999@gmail.com" target="blank">abdihamiid</a> )</b> v1.0
+
+</div>
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https:///">BootstrapMade</a>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.min.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.min.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+   
     <!-- ./wrapper -->
    
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
+    <!-- <script>
       $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
-    <script src="<?php echo base_url ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <!-- ChartJS -->
-    <script src="<?php echo base_url ?>plugins/chart.js/Chart.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/chart.js/Chart.min.js"></script> -->
     <!-- Sparkline -->
-    <script src="<?php echo base_url ?>plugins/sparklines/sparkline.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/sparklines/sparkline.js"></script> -->
     <!-- Select2 -->
-    <script src="<?php echo base_url ?>plugins/select2/js/select2.full.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/select2/js/select2.full.min.js"></script> -->
     <!-- JQVMap -->
-    <script src="<?php echo base_url ?>plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/jqvmap/jquery.vmap.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
     <!-- jQuery Knob Chart -->
-    <script src="<?php echo base_url ?>plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/jquery-knob/jquery.knob.min.js"></script> -->
     <!-- daterangepicker -->
-    <script src="<?php echo base_url ?>plugins/moment/moment.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/moment/moment.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/daterangepicker/daterangepicker.js"></script> -->
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="<?php echo base_url ?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
     <!-- Summernote -->
-    <script src="<?php echo base_url ?>plugins/summernote/summernote-bs4.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="<?php echo base_url ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- <script src="<?php echo base_url ?>plugins/summernote/summernote-bs4.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/datatables/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script> -->
+    <!-- <script src="<?php echo base_url ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script> --> -->
     <!-- overlayScrollbars -->
     <!-- <script src="<?php echo base_url ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
     <!-- AdminLTE App -->
-    <script src="<?php echo base_url ?>dist/js/adminlte.js"></script>
-    <div class="daterangepicker ltr show-ranges opensright">
-      <div class="ranges">
-        <ul>
-          <li data-range-key="Today">Today</li>
-          <li data-range-key="Yesterday">Yesterday</li>
-          <li data-range-key="Last 7 Days">Last 7 Days</li>
-          <li data-range-key="Last 30 Days">Last 30 Days</li>
-          <li data-range-key="This Month">This Month</li>
-          <li data-range-key="Last Month">Last Month</li>
-          <li data-range-key="Custom Range">Custom Range</li>
-        </ul>
-      </div>
-      <div class="drp-calendar left">
-        <div class="calendar-table"></div>
-        <div class="calendar-time" style="display: none;"></div>
-      </div>
-      <div class="drp-calendar right">
-        <div class="calendar-table"></div>
-        <div class="calendar-time" style="display: none;"></div>
-      </div>
-      <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
-    </div>
-    <div class="jqvmap-label" style="display: none; left: 1093.83px; top: 394.361px;">Idaho</div>
+   
