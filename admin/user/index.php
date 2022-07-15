@@ -1,3 +1,25 @@
+
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
 <?php 
 $user = $conn->query("SELECT * FROM users where id ='".$_settings->userdata('id')."'");
 foreach($user->fetch_array() as $k =>$v){
@@ -9,9 +31,10 @@ foreach($user->fetch_array() as $k =>$v){
 	alert_toast("<?php echo $_settings->flashdata('success') ?>",'success')
 </script>
 <?php endif;?>
-<div class="card card-outline card-primary">
-	<div class="card-body">
-		<div class="container-fluid">
+<section class="section">
+<div class="row">
+	<div class="col-lg-6">
+		<div class="card ml-72">
 			<div id="msg"></div>
 			<form action="" id="manage-user">	
 				<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
@@ -53,6 +76,7 @@ foreach($user->fetch_array() as $k =>$v){
 			</div>
 		</div>
 </div>
+</section>
 <style>
 	img#cimg{
 		height: 15vh;
