@@ -1,63 +1,67 @@
+<link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
 
 <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand navbar-dark border border-light border-top-0  border-left-0 border-right-0 navbar-light text-sm">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-          </li>
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url ?>" class="nav-link"><?php echo (!isMobileDevice()) ? $_settings->info('name'):$_settings->info('short_name'); ?> - Admin</a>
-          </li>
+     
+         
         </ul>
         <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
-          <!-- Navbar Search -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-            <i class="fas fa-search"></i>
-            </a>
-            <div class="navbar-search-block">
-              <form class="form-inline">
-                <div class="input-group input-group-sm">
-                  <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                  <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                    <i class="fas fa-search"></i>
-                    </button>
-                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                    <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </li> -->
-          <!-- Messages Dropdown Menu -->
-          <li class="nav-item">
-            <div class="btn-group nav-link">
-                  <button type="button" class="btn btn-rounded badge badge-light dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                    <span><img src="<?php echo validate_image($_settings->userdata('avatar')) ?>" class="img-circle elevation-2 user-img" alt="User Image"></span>
-                    <span class="ml-3"><?php echo ucwords($_settings->userdata('firstname').' '.$_settings->userdata('lastname')) ?></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                  </button>
-                  <div class="dropdown-menu" role="menu">
-                    <a class="dropdown-item" href="<?php echo base_url.'admin/?page=user' ?>"><span class="fa fa-user"></span> My Account</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="<?php echo base_url.'/classes/Login.php?f=logout' ?>"><span class="fas fa-sign-out-alt"></span> Logout</a>
-                  </div>
-              </div>
+ <nav class="header-nav ml-auto">
+  <ul class="d-flex align-items-center">
+  <li class="nav-item d-none d-sm-inline-block">
+            <a href="<?php echo base_url ?>" class="nav-link"><?php echo (!isMobileDevice()) ? $_settings->info('name'):$_settings->info('short_name'); ?> - Admin</a>
           </li>
-          <li class="nav-item">
-            
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-            </a>
-          </li>
-        </ul>
+<li class="nav-item dropdown pe-3">
+<button class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+  <span><img src="<?php echo validate_image($_settings->userdata('avatar')) ?>" alt="user image" class="rounded-circle"></span>
+ 
+  <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucwords($_settings->userdata('firstname').' '.$_settings->userdata('lastname')) ?></span>
+  <span class="sr-only">Toggle Dropdown</span>
+</button>
+
+<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+  
+
+  <li>
+    <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url.'admin/?page=user' ?>">
+      <i class="bi bi-person"></i>
+      <span>My Account</span>
+    </a>
+  </li>
+  <li>
+    <hr class="dropdown-divider">
+  </li>
+
+
+
+  <li>
+ 
+    <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url.'/classes/Login.php?f=logout' ?>">
+      <i class="bi bi-box-arrow-right"></i>
+      <span>Sign Out</span>
+    </a>
+  </li>
+
+</ul>
+
+      
+      
       </nav>
       <!-- /.navbar -->
