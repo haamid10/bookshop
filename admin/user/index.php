@@ -115,14 +115,18 @@ foreach($user->fetch_array() as $k =>$v){
 		
 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 <form>
+<div class="form-group">
+			
                     <div class="row mb-3">
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                       <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
+											<label class="btn btn-primary" for="customFile">Choose file</label>
+											<input type="file" class="btn btn-primary" onchange="displayImg(this,$(this))"> 
+											
+                          
+                         
+													<img src="<?php echo validate_image(isset($meta['avatar']) ? $meta['avatar'] :'') ?>" alt=""  >
+                        
                       </div>
                     </div>
            	<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
@@ -147,7 +151,7 @@ foreach($user->fetch_array() as $k =>$v){
 
                     
                     <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
+                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">T</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
                       </div>
@@ -155,9 +159,52 @@ foreach($user->fetch_array() as $k =>$v){
 
                    
                     <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
+                      
+											<button class="btn btn-primary"  form="manage-user">
+                      save changes
+                    </button>
                     </div>
+										
+					
+				</div>
                   </form><!-- End Profile Edit Form -->
+
+									<div class="form-group">
+					<label for="name">Last Name</label>
+					<input type="text" name="lastname" id="lastname" class="form-control" value="<?php echo isset($meta['lastname']) ? $meta['lastname']: '' ?>" required>
+				</div>
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($meta['username']) ? $meta['username']: '' ?>" required  autocomplete="off">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" class="form-control" value="" autocomplete="off">
+					<small><i>Leave this blank if you dont want to change the password.</i></small>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Avatar</label>
+					<div class="custom-file">
+		              <input type="file" class="custom-file-input rounded-circle" id="customFile" name="img" onchange="displayImg(this,$(this))">
+		              <label class="custom-file-label" for="customFile">Choose file</label>
+		            </div>
+				</div>
+				<div class="form-group d-flex justify-content-center">
+					<img src="<?php echo validate_image(isset($meta['avatar']) ? $meta['avatar'] :'') ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+                  
+				<button class="accordion-button w-28"  form="manage-user">
+                      Accordion Item #1
+                    </button>
+					
+				</div>
+			</div>
+
 
 </div>		
 		
