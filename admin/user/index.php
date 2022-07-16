@@ -107,7 +107,7 @@ foreach($user->fetch_array() as $k =>$v){
                     <div class="col-lg-3 col-md-4 label">Country</div>
                     <div class="col-lg-9 col-md-8">Somaliland</div>
                </div>
-
+									</div>
 </div>	
 		
 		
@@ -125,14 +125,15 @@ foreach($user->fetch_array() as $k =>$v){
                         </div>
                       </div>
                     </div>
-										<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
-				<div class="form-group">
-					<label for="name">First Name</label>
-					<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($meta['firstname']) ? $meta['firstname']: '' ?>" required>
+           	<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
+			
                     <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+										<label class="col-md-4 col-lg-3 col-form-label" for="name">First Name</label>
+                      
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                        
+											
+					<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($meta['firstname']) ? $meta['firstname']: '' ?>" required>
                       </div>
                     </div>
 
@@ -158,7 +159,7 @@ foreach($user->fetch_array() as $k =>$v){
                     </div>
                   </form><!-- End Profile Edit Form -->
 
-		 </div>		
+</div>		
 		
 								<form action="" id="manage-user">	
 				<input type="hidden" name="id" value="<?php echo $_settings->userdata('id') ?>">
