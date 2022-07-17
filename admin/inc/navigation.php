@@ -4,13 +4,9 @@
 
 <!-- Main Sidebar Container -->
 <div class="p-8">
-      <aside class="bg-gray-900  main-sidebar  ">
+      <aside class="  ">
         <!-- Brand Logo -->
-        <a href="<?php echo base_url ?>admin" class="brand-link bg-primary text-sm">
-        <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" class="rounded-full inline-block  w-24 h-auto 
-        " >
-        <span class="brand-text font-weight-light"><?php echo $_settings->info('short_name') ?></span>
-        </a>
+        
         <!-- Sidebar -->
         <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-transition os-host-scrollbar-horizontal-hidden">
           <div class="os-resize-observer-host observed">
