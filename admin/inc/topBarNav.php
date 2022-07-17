@@ -21,47 +21,7 @@
 <!-- Navbar -->
      
          
-        </ul>
+        
         <!-- Right navbar links -->
- <nav class="header-nav ml-auto">
-  <ul class="d-flex align-items-center">
-  <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?php echo base_url ?>" class="nav-link"><?php echo (!isMobileDevice()) ? $_settings->info('name'):$_settings->info('short_name'); ?> - Admin</a>
-          </li>
-<li class="nav-item dropdown pe-3">
-<button class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-  <span><img src="<?php echo validate_image($_settings->userdata('avatar')) ?>" alt="user image" class="rounded-circle"></span>
  
-  <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucwords($_settings->userdata('firstname').' '.$_settings->userdata('lastname')) ?></span>
-  <span class="sr-only">Toggle Dropdown</span>
-</button>
-
-<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-  
-
-  <li>
-    <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url.'admin/?page=user' ?>">
-      <i class="bi bi-person"></i>
-      <span>My Account</span>
-    </a>
-  </li>
-  <li>
-    <hr class="dropdown-divider">
-  </li>
-
-
-
-  <li>
- 
-    <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url.'/classes/Login.php?f=logout' ?>">
-      <i class="bi bi-box-arrow-right"></i>
-      <span>Sign Out</span>
-    </a>
-  </li>
-
-</ul>
-
-      
-      
-      </nav>
       <!-- /.navbar -->

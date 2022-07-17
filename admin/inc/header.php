@@ -39,7 +39,9 @@
    <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
-  <a href="./header.php" class="logo d-flex align-items-center">
+<a href="<?php echo base_url ?>admin" class="logo d-flex align-items-center">
+        <img src="<?php echo validate_image($_settings->info('logo'))?>" alt="Store Logo" >
+       
     
     <span  class="d-none d-lg-block">Iqra Books</span>
   </a>
@@ -69,7 +71,7 @@
           </li>
 <li class="nav-item dropdown pe-3">
 <button class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-  <span><img src="<?php echo validate_image($_settings->userdata('avatar')) ?>" alt="user image" class="rounded-circle"></span>
+  
  
   <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo ucwords($_settings->userdata('firstname').' '.$_settings->userdata('lastname')) ?></span>
   <span class="sr-only">Toggle Dropdown</span>
