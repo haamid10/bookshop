@@ -63,15 +63,13 @@
                         </span>
                       </a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=sales" class="nav-link nav-sales">
-                        <i class="nav-icon fas fa-file"></i>
-                        <p>
-                          Sales Report
-                        </p>
+                    <li class="nav-item">
+                      <a href="<?php echo base_url ?>admin/?page=sales" class="nav-link collapsed">
+                      <i class="bi bi-bar-chart"></i><span>Sales report</span>
                       </a>
                     </li>
-                    <li class="nav-header">Maintenance</li>
+
+                    <li class="nav-heading">Maintenance</li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=maintenance/category" class="nav-link nav-maintenance/category">
                         <i class="nav-icon fas fa-th-list"></i>
