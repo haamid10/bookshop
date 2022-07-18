@@ -40,27 +40,27 @@
                        
                       </a>
                     </li> 
+
                     <li class="nav-item">
                     <a href="<?php echo base_url ?>admin/?page=product" class="nav-link collapsed">
-       
-                 <i class="bi bi-menu-button-wide"></i><span>Book Lists</span><i class=""></i>
+                   <i class="bi bi-menu-button-wide"></i><span>Book Lists</span>
                    </a>
                     </li>
        
-                    <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=inventory" class="nav-link nav-inventory">
-                        <i class="nav-icon fas fa-clipboard-list"></i>
-                        <p>
-                          Inventory List
-                        </p>
-                      </a>
+
+                    <li class="nav-item">
+                    <a href="<?php echo base_url ?>admin/?page=inventory" class="nav-link collapsed">
+                   <i class="bi bi-journal-text"></i><span>Inventory List</span>
+                       </a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=orders" class="nav-link nav-orders">
-                        <i class="nav-icon fas fa-list"></i>
-                        <p>
+                 
+
+                    <li class="nav-item ">
+                      <a href="<?php echo base_url ?>admin/?page=orders" class="nav-link collapsed">
+                      <i class="bi bi-layout-text-window-reverse"></i>
+                        <span>
                           Order List
-                        </p>
+                        </span>
                       </a>
                     </li>
                     <li class="nav-item dropdown">
