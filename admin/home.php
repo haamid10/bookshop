@@ -122,33 +122,32 @@
 
             </div><!-- End Customers Card -->
 
-            <!-- Reports -->
+            <!-- sales reports-->
             <div class="col-12">
               <div class="card">
 
            
                 <div class="card-body">
 
-                <h4 class="card-title"><?php echo $_settings->info('name') ?> Sales Report <?php echo $date_start ?>-   and <?php echo $date_end ?></h4>
+                <h4 class="card-title"><?php echo $_settings->info('name') ?> Sales Report</h4>
                 <p class=""> </p>
 
 
 
 
+ <!-- Recent Sales -->
 
-
-    <?php 
-$date_start = isset($_GET['date_start']) ? $_GET['date_start'] :  date("Y-m-d",strtotime(date("Y-m-d")." -7 days")) ;
-$date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
-?>
+                <?php 
+          $date_start = isset($_GET['date_start']) ? $_GET['date_start'] :  date("Y-m-d",strtotime(date("Y-m-d")." -7 days")) ;
+         $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
+           ?>      
                 
                 
                   
 
-                  <!-- Line Chart -->
           
 
-            <!-- Recent Sales -->
+           
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
 
@@ -212,40 +211,10 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] :  date("Y-m-d") ;
               </div>
             </div>
 <!-- buugaagta -->
-<div class="container">
-  <?php 
-    $files = array();
-    $products = $conn->query("SELECT * FROM `products` order by rand() ");
-    while($row = $products->fetch_assoc()){
-      if(!is_dir(base_app.'uploads/product_'.$row['id']))
-      continue;
-      $fopen = scandir(base_app.'uploads/product_'.$row['id']);
-      foreach($fopen as $fname){
-        if(in_array($fname,array('.','..')))
-          continue;
-        $files[]= validate_image('uploads/product_'.$row['id'].'/'.$fname);
-      }
-    }
-  ?>
-  <div id="tourCarousel"  class="carousel slide" data-ride="carousel" data-interval="3000">
-      <div class="carousel-inner h-100">
-          <?php foreach($files as $k => $img): ?>
-          <div class="carousel-item  h-100 <?php echo $k == 0? 'active': '' ?>">
-              <img class="d-block w-100  h-100" style="object-fit:contain" src="<?php echo $img ?>" alt="">
-          </div>
-          <?php endforeach; ?>
-      </div>
-      <a class="carousel-control-prev" href="#tourCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#tourCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-      </a>
-  </div>
-       
+   
 
 </section>
 
         </main>
+
+ 
