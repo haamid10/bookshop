@@ -1,45 +1,52 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </style>
 
 <!-- Main Sidebar Container -->
-<div class="p-8">
-      <aside class="  ">
+
+<aside id="sidebar" class="sidebar">
         <!-- Brand Logo -->
         
         <!-- Sidebar -->
-        <div class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-transition os-host-scrollbar-horizontal-hidden">
-          <div class="os-resize-observer-host observed">
-            <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
-          </div>
-          <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
-            <div class="os-resize-observer"></div>
-          </div>
-          <div class="os-content-glue" style="margin: 0px -8px; width: 249px; height: 646px;"></div>
-          <div class="os-padding">
-            <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
-              <div class="os-content" style="padding: 0px 8px; height: 100%; width: 100%;">
-                <!-- Sidebar user panel (optional) -->
-                <div class="clearfix"></div>
-                <!-- Sidebar Menu -->
-                <nav class=" mt-4">
-                   <ul class="" data-widget="treeview" role="menu" data-accordion="false">
-                    <li class="nav-item dropdown">
-                      <a href="./" class="nav-link nav-home">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p class="mt-12">
+        
+                   <ul class="sidebar-nav" data-widget="treeview" role="menu" data-accordion="false" id="sidebar-nav">
+                    <li class="nav-item ">
+                      <a href="./" class="nav-link ">
+                      <i class="bi bi-grid"></i>
+                        <span>
                           Dashboard
-                        </p>
+                       
+                       
                       </a>
                     </li> 
-                    <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>admin/?page=product" class="nav-link nav-product">
-                        <i class="nav-icon fas fa-book-open"></i>
-                        <p>
-                          Book List
-                        </p>
-                      </a>
+                    <li class="nav-item">
+                    <a href="<?php echo base_url ?>admin/?page=product" class="nav-link collapsed">
+       
+                 <i class="bi bi-menu-button-wide"></i><span>Book Lists</span><i class=""></i>
+                   </a>
                     </li>
+       
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>admin/?page=inventory" class="nav-link nav-inventory">
                         <i class="nav-icon fas fa-clipboard-list"></i>
@@ -95,18 +102,9 @@
               </div>
             </div>
           </div>
-          <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
-            <div class="os-scrollbar-track">
-              <div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px);"></div>
-            </div>
+         
           </div>
-          <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
-            <div class="os-scrollbar-track">
-              <div class="os-scrollbar-handle" style="height: 55.017%; transform: translate(0px, 0px);"></div>
-            </div>
-          </div>
-          <div class="os-scrollbar-corner"></div>
-        </div>
+          
         <!-- /.sidebar -->
       </aside>
       <script>
